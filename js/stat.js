@@ -38,14 +38,14 @@ window.renderStatistics = function (ctx, names, times) {
 
   for (var i = 0; i < names.length; i++) {
     ctx.fillStyle = '#000';
-    ctx.fillText(names[i], CLOUD_X + DISTANATION + (BAR_WIDTH + DISTANATION)*i,  DISTANATION*2 + GAP + FONT_GAP + BAR_HEIGHT);
+    ctx.fillText(names[i], CLOUD_X + DISTANATION + (BAR_WIDTH + DISTANATION) * i, DISTANATION * 2 + GAP + FONT_GAP + BAR_HEIGHT);
 
     if (names[i] !== 'Вы') {
       ctx.fillStyle = 'rgba(43, 85, 150,' + Math.random() + ')';
     } else {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     }
-        ctx.fillRect(CLOUD_X + DISTANATION + (BAR_WIDTH + DISTANATION)*i, CLOUD_HEIGHT - DISTANATION / 2, BAR_WIDTH, -(BAR_HEIGHT*times[i]) / maxTime);
+    ctx.fillRect(CLOUD_X + DISTANATION + (BAR_WIDTH + DISTANATION) * i, CLOUD_HEIGHT - DISTANATION / 2, BAR_WIDTH, -(BAR_HEIGHT * times[i]) / maxTime);
   }
 };
 
